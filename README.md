@@ -1,8 +1,8 @@
-# Mosquitto docker image
+# armhf Mosquitto docker image
 
 ## Description
 
-Mosquitto [http://http://mosquitto.org/] Docker image based on Alpine Linux.
+[Mosquitto](http://mosquitto.org) Docker image based on Alpine Linux.
 
 ## Build
 
@@ -12,11 +12,13 @@ To build:
 docker build .
 ```
 
+It's based on foertel/alpine with qemu-arm-static so it can be built (and run) on x86.
+
 ## Usage
 
 Start the container:
 
 ```
-docker run -d -p 1883:1883 najibninaba/mosquitto
+docker run -d -p 1883:1883 foertel/armhf-alpine-mosquitto
 ```
 
